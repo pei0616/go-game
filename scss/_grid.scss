@@ -1,0 +1,73 @@
+#title{
+    margin: 10px auto ;
+    .chess{
+        vertical-align: middle;
+        padding-bottom: 3px;
+        animation-timing-function:ease-in;
+        animation-duration:2s;
+    }
+    
+    .black{
+        animation:black;
+    }
+    
+    .white{
+        animation:white;
+    }
+    
+    @keyframes black{
+        0%{transform:translate(-100px,200px)}
+        50%{transform:translate(-100px,200px)}
+        100%{transform:translate(0,0)}
+    }
+    
+    @keyframes white{
+        0%{transform:translate(50px,100px)}
+        50%{transform:translate(50px,100px)}
+        100%{transform:translate(0,0)}
+    }
+}
+
+#cas
+{
+    display:block;
+    box-shadow: 5px 5px 10px #ddd;
+    border:1px solid #eee;
+    cursor: pointer;
+    margin:0 auto 10px;
+    background-color:burlywood;
+    //margin:auto;
+    //width:$cvsW-b;
+    //height:$cvsH-b;
+}
+
+/*@media screen and (max-width:767.98px){
+   #cas{
+       width:$cvsW-s;
+       height:$cvsH-s;
+   }
+}*/
+
+#reset
+{
+    border:2px solid #eee;
+    width:110px;
+    cursor: pointer;
+    border-radius: 10px;
+    padding:5px 0;
+    margin: 5px auto ;  
+    .icon
+    {
+        width:20px;
+        height:20px;
+        vertical-align: middle;
+        padding-bottom: 2px;
+        /*display:none;*/
+    }
+}
+
+.result
+{
+    color:blue;
+}
+

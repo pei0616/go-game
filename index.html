@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>五子棋</title>
+    <link rel="stylesheet" type="text/css" href="css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Sans+TC:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2:wght@500&family=Noto+Sans+TC:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--svg-->
+    <svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+        <symbol id="icon-sad" viewBox="0 0 32 32">
+        <path fill="#ffca28"  d="M32 16c0 8.837-7.163 16-16 16s-16-7.163-16-16c0-8.837 7.163-16 16-16s16 7.163 16 16z"></path>
+        <path fill="#6d4c41"  d="M22.364 24.636c-0.256 0-0.512-0.098-0.708-0.292-3.024-3.024-8.292-3.024-11.314 0-0.39 0.39-1.024 0.39-1.414 0s-0.39-1.024 0-1.414c1.89-1.888 4.4-2.93 7.072-2.93s5.182 1.042 7.070 2.93c0.39 0.39 0.39 1.024 0 1.414-0.194 0.196-0.45 0.292-0.706 0.292z"></path>
+        <path fill="#6d4c41"  d="M12 12c0 1.105-0.895 2-2 2s-2-0.895-2-2c0-1.105 0.895-2 2-2s2 0.895 2 2z"></path>
+        <path fill="#6d4c41"  d="M24 12c0 1.105-0.895 2-2 2s-2-0.895-2-2c0-1.105 0.895-2 2-2s2 0.895 2 2z"></path>
+        </symbol>
+        <radialGradient id="black" cx=".5" cy=".5"  r=".5">
+            <stop offset="0" stop-color="#636766"></stop>
+            <!--stop offset="50%" stop-color="#0a0a0a"></stop-->
+            <stop offset="100%" stop-color="#0a0a0a"></stop>
+        </radialGradient>
+        <radialGradient id="white" cx=".5" cy=".5"  r=".5">
+            <stop offset="0" stop-color="#FFFEFE "></stop>
+            <!--stop offset="50%" stop-color="#0a0a0a"></stop-->
+            <stop offset="100%" stop-color="#E2E1E1"></stop>
+        </radialGradient>
+        </defs>
+        </svg>
+    <!--svg-->
+    <h1 id="title">益智五子棋
+        <svg class="chess black" width="30"  height="30">
+            <circle  cx="15" cy="15" r="15" style="fill: url(#black)"/>
+        </svg>
+        <svg class="chess white" width="30"  height="30">
+            <circle  cx="15" cy="15" r="15" style="fill: url(#white)"/>
+        </svg>
+    </h1>
+    <canvas id="cas"></canvas>
+    <h3 id="reset">重新挑戰
+        <svg class="icon" id="icon-sad" xmlns="http://www.w3.org/2000/svg">
+            <use xlink:href="svg/sprite/sprite.svg#icon-sad"></use>
+        </svg>
+    </h3>
+    <script src="index.js"></script>
+</body>
+</html>
