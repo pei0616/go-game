@@ -3,23 +3,24 @@ var ctx=cvs.getContext('2d');
 var reset = document.getElementById('reset');
 var title = document.getElementById('title');
 
-function getViewWidthHeight() {
-    var wh = {};
+//取得可見視窗的寬度
+function getViewWidth() {
+    var w = {};
     if(window.innerWidth) {
-        wh.width = window.innerWidth;  
+        w.width = window.innerWidth;  
     }
     else if(document.documentElement.clientWidth) {
-        wh.width = document.documentElement.clientWidth;
+        w.width = document.documentElement.clientWidth;
     }
     else if(document.body.clientWidth) {
-        wh.width = document.body.clientWidth;
+        w.width = document.body.clientWidth;
     }
-    return wh;
+    return w;
 }
 //改變畫布大小
 function resizeCanvas(){
     //取得可見視窗寬度
-    var view =getViewWidthHeight();
+    var view = getViewWidth();
     console.log(view.width);
     //調整棋盤繪製
     if(view.width < 768){
@@ -53,8 +54,10 @@ function resizeCanvas(){
 }
 //重新載入畫布大小
 window.addEventListener('resize',resizeCanvas());
-
-
+//禁止使用者選取DOM元素
+document.onselectstart=function(){
+    return false;
+}
 
 //贏法術組代表我們看整個棋盤的所有贏法有哪些，包括橫向、垂直、斜向
 //是個三維數組包括X,Y座標，還有是第幾種贏法(COUNT)
@@ -321,25 +324,14 @@ function computerPlayerAction(){
                     u=x;
                     v=y;
                 }
-                /*else if(myScore[x][y]==max){
-                    if(computerScore[x][y]>computerScore[u][v]){
-                        u=x;
-                        v=y;
-                    }
-                }*/
+                
 
                 if(computerScore[x][y]>max){
                     max=computerScore[x][y];
                     u=x;
                     v=y;
                 }
-                /*else if(computerScore[x][y]==max){
-                    if(myScore[x][y]>myScore[u][v]){
-                        u=x;
-                        v=y;
-                    }
-                }*/
-
+                
             }
         }
     }
