@@ -3,7 +3,7 @@ var ctx=cvs.getContext('2d');
 var reset = document.getElementById('reset');
 var title = document.getElementById('title');
 
-//取得可見視窗的寬度
+//取得可見視窗的寬度(不包含工具列、卷軸)
 function getViewWidth() {
     var w = {};
     if(window.innerWidth) {
